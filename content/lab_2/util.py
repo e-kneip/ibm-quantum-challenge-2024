@@ -6,7 +6,7 @@ def version_check():
     if qiskit.version.VERSION == '1.0.2':
         return print("You have the right version! Enjoy the challenge!")
     else:
-        return print("please install right version by copy/paste and execute - !pip install 'qiskit[visualization]' == 1.0.2'")
+        return print("please install right version by copy/paste and execute - %pip install 'qiskit[visualization]' == 1.0.2'")
 
 def transpile_scoring(circ, layout, backend):
 
@@ -19,7 +19,7 @@ def transpile_scoring(circ, layout, backend):
         backend (IBMQBackend): An IBM Quantum backend instance
 
     Returns:
-        list: Tuples of layout and cost
+        float: Fidelity of circ
     """
 
     fid = 1
